@@ -6,7 +6,7 @@
             <div class="healthbar">
                 <div
                         class="healthbar text-center slider"
-                        :style="[ playerHealth >= 50 ? {'width': playerHealth + '%', 'background-color': 'green'} : playerHealth < 50 && playerHealth >= 15 ? {'width': playerHealth + '%', 'background-color': 'yellow', 'color': 'black'} : {'width': playerHealth + '%', 'background-color': 'red'}]">
+                        :style="[ playerHealth >= 50 ? {'width': playerHealth + '%', 'background-color': 'blue'} : playerHealth < 50 && playerHealth >= 15 ? {'width': playerHealth + '%', 'background-color': 'yellow', 'color': 'black'} : {'width': playerHealth + '%', 'background-color': 'red'}]">
                         
                     {{ playerHealth }}
                 </div>
