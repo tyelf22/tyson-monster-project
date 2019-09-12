@@ -1,20 +1,27 @@
 <template>
   <v-app>
-    <v-app-bar app>
+   <nav> 
+    <v-app-bar app dark>
+      <v-app-bar-nav-icon class="white--text" @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title class="headline text-uppercase">
         <span class="font-weight-light">Monster</span>
         <span class="font-weight-heavy">Project</span>
       </v-toolbar-title>
-      <v-btn
-        text
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-      </v-btn>
     </v-app-bar>
+  <v-navigation-drawer v-model="drawer" app dark class="white--text">
+    <v-list dark rounded>
+      <v-list-item-group  class="title">
+        <v-list-item> {{ Home }} </v-list-item>
+        <v-list-item> {{ About }} </v-list-item>
+      </v-list-item-group>
+    </v-list>
+  </v-navigation-drawer>
+
+   </nav>
 
     <v-content>
       <HelloWorld/>
+      <v-btn>Click Me</v-btn>
     </v-content>
   </v-app>
 
@@ -71,7 +78,7 @@
 
 <script>
 import HelloWorld from './components/HelloWorld';
-import { VApp, VAppBar, VToolbarTitle, VContent, VBtn} from 'vuetify/lib'
+import { VApp, VAppBar, VToolbarTitle, VContent, VBtn, VNavigationDrawer, VAppBarNavIcon, VList, VListItem, VListItemGroup} from 'vuetify/lib'
 
 
 export default {
@@ -82,10 +89,17 @@ export default {
     VAppBar,
     VToolbarTitle,
     VContent,
-    VBtn
+    VBtn,
+    VNavigationDrawer,
+    VAppBarNavIcon,
+    VList,
+    VListItem,
+    VListItemGroup
   },
   data: () => ({
-    //
+    drawer: false,
+    Home: 'Home',
+    About: 'About'
   }),
 };
 
