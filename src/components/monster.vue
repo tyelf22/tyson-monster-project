@@ -76,12 +76,13 @@ export default {
             this.monsterHealth = 0;
             this.turns = [];
         },
+
         attack: function () {
             var damage = this.calculateDamage(0, 3);
             this.monsterHealth += damage;
             this.turns.unshift({
                 isPlayer: true,
-                text: 'Opponent Scores ' + damage
+                text: 'Opponent Scored ' + damage
             });
             if (this.checkWin()) {
                 return;
@@ -125,7 +126,7 @@ export default {
             this.checkWin();
             this.turns.unshift({
                 isPlayer: false,
-                text: 'You hit a jumper ' + damage
+                text: 'You scored ' + damage
             });
         },
         calculateDamage: function(min, max) {
@@ -133,14 +134,14 @@ export default {
         },
         checkWin: function() {
             if (this.monsterHealth >= 100) {
-                if (confirm('Monster Won')) {
+                if (confirm('Don\'t Be A Sore Loser!')) {
                     this.startGame();
                 } else {
                     this.gameIsRunning = false;
                 }
                 return true;
             } else if (this.playerHealth >= 100) {
-                if (confirm('You Won')) {
+                if (confirm('Good Game! You Won!')) {
                     this.startGame();
                 } else {
                     this.gameIsRunning = false;
