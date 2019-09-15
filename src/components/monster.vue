@@ -1,5 +1,8 @@
 <template>
     <v-container>
+        <div class="imageCenter animated bounce">
+            <v-img height="50" max-width="50" class="float-center" src="../assets/basketball.png" alt="basketball"></v-img>
+        </div>
     <div class="row">
         <div class="small-6 columns">
             <h1 class="text-center">YOU</h1>
@@ -51,7 +54,7 @@
 
 <script>
 
-import {VBtn} from 'vuetify/lib'
+import {VBtn, VImg} from 'vuetify/lib'
 
 
 
@@ -66,7 +69,9 @@ export default {
     },
     components: function () {
         return {
-        Vbtn
+        Vbtn,
+        VImg
+
         }
     },
     methods: {
@@ -168,6 +173,13 @@ export default {
     text-align: center;
 }
 
+.imageCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -40px;
+}
+
 .healthbar {
     width: 80%;
     height: 40px;
@@ -176,6 +188,7 @@ export default {
     transition: width 500ms;
 
 }
+
 
 .slider {
     margin: 0; 
