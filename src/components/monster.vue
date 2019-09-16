@@ -69,9 +69,8 @@ export default {
     },
     components: function () {
         return {
-        Vbtn,
+        VBtn,
         VImg
-
         }
     },
     methods: {
