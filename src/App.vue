@@ -7,18 +7,16 @@
         <span class="font-weight-heavy white--text">Project</span>
       </v-toolbar-title>
     </v-app-bar>
-
-
    </nav>
 
     <v-content>
       <monster/>
     </v-content>
+    
   </v-app>
 </template>
 
 <script>
-
 import monster from './components/monster';
 import { VApp, VAppBar, VToolbarTitle, VContent, VBtn, VNavigationDrawer, VAppBarNavIcon, VList, VListItem, VListItemGroup} from 'vuetify/lib'
 
