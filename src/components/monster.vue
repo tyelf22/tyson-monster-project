@@ -1,8 +1,10 @@
 <template>
     <v-container>
-        <div class="imageCenter animated bounce">
-            <v-img height="50" max-width="50" class="float-center" src="../assets/basketball.png" alt="basketball"></v-img>
+    <div class="row">
+        <div class="small-12 columns imageCenter">
+            <v-img height="50" max-width="50" src="../assets/basketball.png" alt="basketball" class="animated bounce"></v-img>
         </div>
+    </div>
     <div class="row">
         <div class="small-6 columns">
             <h1 class="text-center">YOU</h1>
@@ -28,12 +30,12 @@
     </div>
     <div class="row controls" v-if="!gameIsRunning">
         <div class="small-12 columns">
-            <v-btn rounded color="success" id="start-game" @click="startGame">START NEW GAME</v-btn>
+            <v-btn rounded color="green" class="white--text" id="start-game" @click="startGame">START NEW GAME</v-btn>
         </div>
     </div>
     <div class="row controls" v-else>
         <div class="small-12 columns">
-            <v-btn large rounded color="success" id="attack" @click="attack">SHOOT</v-btn>
+            <v-btn large rounded class= "white--text" color="green" id="attack" @click="attack">SHOOT</v-btn>
             <v-btn large rounded color="error" id="special-attack" @click="specialAttack">BLOCK</v-btn>
             <v-btn large rounded color="primary" id="heal" @click="heal">3-POINTER</v-btn>
             <v-btn large rounded color="#FBFA00" id="give-up" @click="giveUp">FORFEIT</v-btn>
@@ -220,13 +222,14 @@ export default {
 }
 
 .log ul .player-turn {
-    color: blue;
-    background-color: #e4e8ff;
+    color: red;
+    background-color: #ffc0c1;
 }
 
 .log ul .monster-turn {
-    color: red;
-    background-color: #ffc0c1;
+
+    color: green;
+    background-color: #98fb98;
 }
 
 button {
